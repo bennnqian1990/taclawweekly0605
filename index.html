@@ -189,23 +189,12 @@
   .plan-text { font-size: 13.5px; color: var(--text-secondary); line-height: 1.75; }
   .plan-text strong { color: var(--text-primary); }
 
-  .pm-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .pm-step {
-    background: var(--bg-section); border-radius: var(--radius-md);
-    padding: 20px 16px; text-align: center; border: 1px solid var(--border-color);
-  }
-  .pm-step:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); transition: all 0.2s; }
-  .pm-step-icon { font-size: 24px; margin-bottom: 10px; }
-  .pm-step-title { font-size: 13.5px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
-  .pm-step-desc { font-size: 11.5px; color: var(--text-muted); line-height: 1.7; }
-
   .risk-item {
     display: flex; gap: 14px; margin-bottom: 14px; padding: 16px 18px;
     border-radius: var(--radius-sm); background: var(--accent-red-light);
     border-left: 3px solid var(--accent-red);
   }
   .risk-item:last-child { margin-bottom: 0; }
-  .risk-item .risk-num { font-size: 12px; font-weight: 700; color: var(--accent-red); flex-shrink: 0; margin-top: 1px; }
   .risk-item p { font-size: 13px; color: #991B1B; line-height: 1.75; }
 
   .footer { text-align: center; padding: 36px 0 52px; font-size: 12px; color: var(--text-muted); }
@@ -250,7 +239,6 @@
 
   @media (max-width: 600px) {
     .header h1 { font-size: 22px; } .card { padding: 20px; }
-    .pm-steps { grid-template-columns: 1fr; }
     .data-table { font-size: 11px; }
     .data-table thead th, .data-table tbody td { padding: 7px 8px; }
   }
@@ -273,7 +261,7 @@
     </div>
     <div class="card">
       <div class="goal-highlight">
-        以提高财富管理展业效率与专业能力为第一性原理，构建华泰<strong>TAClaw底座</strong>，将公司各项数据与工具解构成为支持投顾调用的Skills，封装场景化Agent满足轻量化即用需求，同时支持高阶投顾自主组合Skills定制工作流，通过<strong>TAClaw调度中枢 + 大模型 + 原子化Skills</strong>三层体系，让每个投顾定义自己的操作系统，实现投顾服务能力提质增效。同时，基于投顾服务触达最后一公里企微平台，构建企微ChatBOT，打造<strong>自动化执行助手</strong>及<strong>智能聊天助手</strong>，大幅提升服务效率。
+        构建<strong>TAClaw底座</strong>，通过<strong>调度中枢 + 大模型 + 原子化Skills</strong>三层体系，将数据与工具解构为Skills并封装场景化Agent，让投顾定义自己的操作系统。同时基于企微平台构建ChatBOT，打造<strong>自动化执行助手</strong>及<strong>智能聊天助手</strong>，实现投顾服务提质增效。
       </div>
       <div class="img-zoom-wrap" onclick="openLightbox(this)">
         <img src="image.jpg" alt="TAClaw及企微ChatBOT建设路线图" style="width: 100%; display: block;">
@@ -311,32 +299,32 @@
       <div class="progress-item">
         <div class="progress-dot blue"></div>
         <div class="progress-content">
-          <p><strong>1）TAClaw开展灰度环境验收，合计发现59例问题，已修复47例。</strong>本周按基础功能与效果评测两维度开展验收，其中功能方面主要发现历史会话无法查询、页面交互、模型回复慢且偶现卡顿三大类问题（共59个有效问题，47已修复），当前已修复前两类待上线。</p>
+          <p><strong>1）灰度验收：59个问题，已修复47例。</strong>覆盖功能与效果两维度，主要涉及历史会话查询、页面交互、模型回复卡顿三类。</p>
         </div>
       </div>
       <div class="progress-item">
         <div class="progress-dot green"></div>
         <div class="progress-content">
-          <p><strong>2）630版本完成2轮需求讲解，启动技术侧需求分析。</strong>基于最新需求范围，完成UI视觉设计及产品PRD定稿，主要能力包含：大模型扩展切换、常用场景配置后台、产物文件管理，新增管理员Skill发布上架，并会同技术侧完成2轮需求讲解、沟通对接方案细节。</p>
+          <p><strong>2）630版本需求定稿，启动技术分析。</strong>完成UI设计与PRD，核心能力：大模型切换、场景配置后台、产物管理、管理员Skill上架。</p>
         </div>
       </div>
       <div class="progress-item">
         <div class="progress-dot purple"></div>
         <div class="progress-content">
-          <p><strong>3）原子Skills灰度测试，合计发现37例问题、已修复30例。</strong>按不同业务领域进行skill原子效果与组合效果评测，目前发现共37个有效问题（30个已修复），部分转630版本优化上线。</p>
+          <p><strong>3）原子Skills灰度测试：37个问题，已修复30例。</strong>部分转630版本优化上线。</p>
         </div>
       </div>
       <div class="indent-block">
         <div class="progress-item">
           <div class="progress-dot purple"></div>
           <div class="progress-content">
-            <p><strong>a. 股票投顾场景</strong> — 开展生产环境股票组合相关Skills能力验收评测，共发现问题8个，逐日跟进技术侧解决修复，并进行复验及持续评测场景覆盖。</p>
+            <p><strong>a. 股票投顾场景</strong> — 生产环境验收评测，发现问题8个，逐日跟进修复并复验。</p>
           </div>
         </div>
         <div class="progress-item">
           <div class="progress-dot orange"></div>
           <div class="progress-content">
-            <p><strong>b. 算法交易场景</strong> — 跟进开发，协助技术侧进行需求细节确定及澄清。</p>
+            <p><strong>b. 算法交易场景</strong> — 跟进开发，协助需求澄清。</p>
           </div>
         </div>
       </div>
@@ -356,7 +344,7 @@
       <div class="progress-item">
         <div class="progress-dot green"></div>
         <div class="progress-content">
-          <p><strong>运营数据</strong><br>本周，受腾讯风控政策影响，自动化执行助手暂停分配新账号，账号总量维持不变。在此背景下，各项核心指标仍实现显著增长：</p>
+          <p><strong>运营数据</strong><br>受腾讯风控影响，本周暂停分配新账号，但核心指标仍逆势增长：</p>
         </div>
       </div>
       <div class="indent-block">
@@ -424,7 +412,7 @@
 
       <div class="case-card">
         <div class="case-label">&#127942; 湖南分公司示范效应</div>
-        <p>湖南分公司高度重视 ChatBot 自动执行工具的应用价值，特邀龚一凡开展专项使用培训。本周湖南分公司执行数据显著提升，示范效应明显：</p>
+        <p>湖南分公司特邀龚一凡开展专项培训，本周执行数据显著提升：</p>
         <div class="compare-table-wrapper" style="margin-top: 10px;">
           <table class="compare-table">
             <thead>
@@ -448,7 +436,7 @@
       </div>
       <div class="indent-block">
         <div class="num-block">
-          <p>&#8226; <strong>腾讯风控应对：</strong>基于新设备2分钟扫码校验，本周已完成验收测试，计划封网结束后上线；托管端版本升级问题，因出现企微客户端闪退等问题，导致升级延期，预计延期至6月中旬。</p>
+          <p>&#8226; <strong>腾讯风控应对：</strong>新设备2分钟扫码校验已完成验收，封网后上线；托管端升级因企微闪退延期至6月中旬。</p>
         </div>
       </div>
     </div>
@@ -460,19 +448,19 @@
       <div class="progress-item">
         <div class="progress-dot purple"></div>
         <div class="progress-content">
-          <p><strong>a. 效果验收及持续调优</strong><br>跟进技术侧V5调优版本内容修复进度，重点解决历史问题刷新时仍拉取答案、无效问题标记并提示、输出内容展示错乱等问题，原定本周五发布，由于封网、将延期至下周三发布。</p>
+          <p><strong>a. 效果验收及持续调优</strong><br>V5版本修复历史问题刷新、无效问题标记、内容展示错乱等，因封网延期至下周三发布。</p>
         </div>
       </div>
       <div class="progress-item">
         <div class="progress-dot blue"></div>
         <div class="progress-content">
-          <p><strong>b. 分支试用情况跟进</strong><br>完成首批分支试用权限开通，目前共开放3家分公司、共约20名投顾试用。同时，通过铃客群为投顾提供功能操作引导及使用答疑。</p>
+          <p><strong>b. 分支试用</strong><br>首批开放3家分公司约20名投顾，通过铃客群提供操作引导与答疑。</p>
         </div>
       </div>
       <div class="progress-item">
         <div class="progress-dot green"></div>
         <div class="progress-content">
-          <p><strong>运营数据</strong><br>本周开始开放20名投顾试用，试用4天（6.1-6.4），共有16名投顾进入应用，10名投顾启用功能，系统自动识别客户问题并生成回复<strong>546条</strong>，主要涵盖业务知识查询、涨乐账户操作、市场/个股分析等方面。其中，<strong>上海乳山路营业部试用效果最充分</strong>，5位开通权限的投顾平均生成有效回复100条以上。</p>
+          <p><strong>运营数据</strong><br>20名投顾试用4天（6.1-6.4），16人进入应用、10人启用，累计生成回复<strong>546条</strong>，覆盖业务查询、涨乐操作、市场分析等场景。<strong>上海乳山路营业部</strong>5名投顾人均超100条，效果最突出。</p>
         </div>
       </div>
 
@@ -507,19 +495,19 @@
     <div class="card">
       <div class="plan-item">
         <div class="plan-num">1</div>
-        <div class="plan-text"><strong>TAClaw底座：</strong>持续开展效果测试、问题定位与解决，同步邀请分支参与小范围体验测试。</div>
+        <div class="plan-text"><strong>TAClaw底座：</strong>持续效果测试与问题修复，邀请分支小范围体验。</div>
       </div>
       <div class="plan-item">
         <div class="plan-num">2</div>
-        <div class="plan-text"><strong>Skills：</strong>持续开展灰度环境效果测试，重点关注Skill输出效果，并沉淀案例场景。</div>
+        <div class="plan-text"><strong>Skills：</strong>持续灰度效果测试，重点关注输出效果，沉淀案例。</div>
       </div>
       <div class="plan-item">
         <div class="plan-num">3</div>
-        <div class="plan-text"><strong>股票投顾场景：</strong>持续开展效果评测及验收场景覆盖，并跟进技术侧问题修复。</div>
+        <div class="plan-text"><strong>股票投顾场景：</strong>持续效果评测与场景覆盖，跟进问题修复。</div>
       </div>
       <div class="plan-item">
         <div class="plan-num">4</div>
-        <div class="plan-text"><strong>算法交易场景：</strong>协助技术侧进行需求细节确定及澄清，跟进开发。</div>
+        <div class="plan-text"><strong>算法交易场景：</strong>协助需求澄清，跟进开发。</div>
       </div>
     </div>
     <div class="sub-header">
@@ -528,37 +516,11 @@
     <div class="card">
       <div class="plan-item">
         <div class="plan-num">1</div>
-        <div class="plan-text"><strong>自动化执行助手：</strong>围绕MOT任务话术自定义及新增客户个性化称呼功能，基于合规建议完成产品方案调整以及UI视觉设计，并提交技术分析。</div>
+        <div class="plan-text"><strong>自动化执行助手：</strong>推进MOT话术自定义及客户个性化称呼，完成方案调整与UI设计，提交技术分析。</div>
       </div>
       <div class="plan-item">
         <div class="plan-num">2</div>
-        <div class="plan-text"><strong>智能聊天助手：</strong>围绕智能回复效果及功能体验提升，发布优化版本V5。同时，跟进分公司试用投顾使用情况及问题反馈。</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section fade-in delay-5">
-    <div class="section-header">
-      <div class="section-icon blue">&#9881;&#65039;</div>
-      <div class="section-title">项目管理及推进机制（日站会、日报、周例会）</div>
-    </div>
-    <div class="card">
-      <div class="pm-steps">
-        <div class="pm-step">
-          <div class="pm-step-icon">&#128336;</div>
-          <div class="pm-step-title">每日晨会</div>
-          <div class="pm-step-desc">固定时间，15分钟<br>聚焦当日问题暴露<br>已完成 / 当日计划 / 阻塞风险</div>
-        </div>
-        <div class="pm-step">
-          <div class="pm-step-icon">&#128221;</div>
-          <div class="pm-step-title">日报同步</div>
-          <div class="pm-step-desc">各模块负责人提报<br>功能模块研发进展<br>交付节点 / 风险依赖</div>
-        </div>
-        <div class="pm-step">
-          <div class="pm-step-icon">&#128197;</div>
-          <div class="pm-step-title">周例会及周报</div>
-          <div class="pm-step-desc">目标回顾 / 进展汇报<br>风险升级 / 计划对齐<br>明确责任人及完成时限</div>
-        </div>
+        <div class="plan-text"><strong>智能聊天助手：</strong>发布V5优化版本，跟进试用投顾反馈。</div>
       </div>
     </div>
   </div>
@@ -572,19 +534,19 @@
       <div class="progress-item">
         <div class="progress-dot blue"></div>
         <div class="progress-content">
-          <p><strong>1. TAClaw 底座建设</strong><br>本周已完成 1.0 版本生产环境全量验证及问题修复，计划本周五发布优化，同步面向投顾团队落地推广试用；同步完成后续版本需求分析、可行性评估及技术方案设计工作，新版本规划于<strong>6月30日</strong>整体上线落地，上线功能涵盖铃客渠道打通、底层模型切换、文件上传下载、会话记忆管理四项核心能力。</p>
+          <p><strong>1. TAClaw 底座建设</strong><br>1.0版本验证及修复完成，本周五发布优化并推广试用；<strong>6月30日</strong>上线新版，含铃客打通、模型切换、文件管理、会话记忆四项。</p>
         </div>
       </div>
       <div class="progress-item">
         <div class="progress-dot green"></div>
         <div class="progress-content">
-          <p><strong>2. Skill 运营管理模块建设</strong><br>本周完成 Skill 注册上架、元数据全生命周期管理等核心功能的方案评审与设计工作，下周正式启动代码开发工作。</p>
+          <p><strong>2. Skill 运营管理模块</strong><br>完成注册上架、元数据管理等方案评审与设计，下周启动开发。</p>
         </div>
       </div>
       <div class="progress-item">
         <div class="progress-dot purple"></div>
         <div class="progress-content">
-          <p><strong>3. 外部 Skill 安装落地与协同管控</strong><br>本周已联合信息技术部敲定跨部门协同工作机制：由业务部门梳理填报 Skill 所需依赖包、外部服务接口、定制化改造需求等基础信息；后续由技术部统筹对接安全、合规风控部门开展安全专项评审，评审通过后依次完成 Skill 注册、网络环境开通及平台上架工作。安全评审核查范围包含：外部访问链接合规性校验、敏感文件越权访问排查、高危命令执行风险、代码注入漏洞、程序后门隐患等全维度安全风险核查。</p>
+          <p><strong>3. 外部 Skill 安装与管控</strong><br>已建立跨部门协同机制：业务提需求，技术统筹安全合规评审（覆盖外部链接、越权访问、高危命令、代码注入、后门等），通过后注册上架。</p>
         </div>
       </div>
     </div>
